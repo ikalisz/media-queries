@@ -1,0 +1,324 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.header {
+    height: 100px;
+    width: 100vw;
+    background: grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menuButton {
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+.nonButtonNav {
+    display: none;
+}
+.menuHolder {
+    height: 40px;
+    width: 80px;
+    background: gold;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.menuHolder:hover {
+    cursor: pointer;
+}
+.menuLines {
+    height: 30%;
+    width: 20%;
+    color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+
+}
+.menuButton {
+    user-select: none;
+}
+.line {
+    height: 2px;
+    background: #000;
+    width: 100%;
+}
+.topActive {
+    animation: topActive 300ms linear;
+    position: relative;
+    transform: translateY(5px) rotate(45deg)
+}
+
+.topHide {
+    animation: topHide 300ms linear;
+}
+
+.middleActive {
+    animation: middleActive 300ms linear;
+    opacity: 0;
+}
+
+.middleHide {
+    animation: middleHide 300ms linear
+}
+
+.bottomActive {
+    animation: bottomActive 300ms linear;
+    position: relative;
+    transform: translateY(-5px) rotate(-45deg) ;
+}
+.bottomHide {
+    animation: bottomHide 300ms linear;
+}
+
+.slideDiv {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 0;
+    background: blue;
+}
+.hidden {
+    animation: leave 350ms linear;
+    height: 0;
+}
+.active {
+    background: blue;
+    animation: show 350ms linear;
+    height: 200px;
+}
+.slideItem {
+    opacity: 0;
+}
+.itemOne {
+    animation: itemOne 300ms linear;
+    opacity: 1;
+}
+.itemOneHide {
+    animation: itemOneHide 350ms linear;
+}
+.itemTwo {
+    animation: itemTwo 350ms linear;
+    opacity: 1;
+}
+.itemTwoHide {
+    animation: itemTwoHide 350ms linear;
+}
+.itemThree {
+    animation: itemThree 350ms linear;
+    opacity: 1;
+}
+.itemThreeHide {
+    animation: itemThreeHide 350ms linear;
+}
+.itemFour {
+    animation: itemFour 350ms linear;
+    opacity: 1
+}
+.itemFourHide {
+    animation: itemFourHide 350ms linear;
+}
+.itemFive {
+    animation: itemFive 350ms linear;
+    opacity: 1;
+}
+.itemFiveHide {
+    animation: itemFiveHide 350ms linear
+}
+@media (min-width: 1000px)  {
+    .header{
+        background: red;
+    }
+    .nonButtonNav {
+        display: flex;
+    }
+    .nonButtonNav h4:hover {
+        cursor: pointer;
+    }
+    .menuHolder {
+        display: none;
+    }
+    .slideDiv {
+        display: none;
+    }
+}
+
+@keyframes show {
+    to {
+        height: 200px;
+    }
+    from {
+        height: 0;
+    }
+}
+
+@keyframes leave {
+    from {
+        height: 200px;
+    }
+    to {
+        height: 0;
+    }
+}
+
+@keyframes itemOne {
+    0%, 20% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+}
+@keyframes itemTwo {
+    0%, 39% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+}
+@keyframes itemThree {
+    0%, 50% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+}
+@keyframes itemFour {
+    0%, 79% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+}
+@keyframes itemFive {
+    0%, 99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes itemOneHide {
+   0% {opacity: 1;}
+   79% {opacity: 1;}
+   80% {opacity: 0;}
+   100% {opacity: 0;}
+}
+@keyframes itemTwoHide {
+    0%, 59% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+    }
+}
+@keyframes itemThreeHide {
+    0%, 39% {
+     opacity: 1;
+    }
+    40% {
+        opacity: 0;
+    }
+}
+@keyframes itemFourHide {
+    0%, 19% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0;
+    }
+}
+@keyframes itemFiveHide {
+    0% {
+        opacity: 1;
+    }
+    1% {
+        opacity: 0;
+    }
+}
+@keyframes bottomActive {
+    0% {
+        position: relative;
+        transform: translateY(0)
+    }
+    20% {
+        position: relative;
+        transform: translateY(-5px) rotate(0)
+    }
+    100% {
+        position: relative;
+        transform: translateY(-5px) rotate(-45deg)
+    }
+}
+@keyframes bottomHide {
+    0% {
+        position: relative;
+        transform: translateY(-5px) rotate(-45deg)
+    }
+    80% {
+        position: relative;
+        transform: translateY(-5px) rotate(0)
+    }
+    100% {
+        position: relative;
+        transform: translateY(0)
+    }
+}
+@keyframes topActive {
+    0% {
+        position: relative;
+        transform: translateY(0)
+    }
+    20% {
+        position: relative;
+        transform: translateY(5px) rotate(0);
+    }
+    100% {
+        transform: translateY(5px) rotate(45deg)
+    }
+}
+@keyframes topHide {
+    0% {
+        position: relative;
+        transform: translateY(5px) rotate(45deg)
+    }
+    80% {
+        position: relative;
+        transform: translateY(5px) rotate(0)
+    }
+    100% {
+        position: relative;
+        transform: translateY(0)
+    }
+}
+
+@keyframes middleActive {
+    0% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0;
+    }
+}
+
+@keyframes middleHide {
+    0% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
